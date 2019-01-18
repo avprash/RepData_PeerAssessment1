@@ -9,7 +9,7 @@ output:
 knitr::opts_chunk$set(warning=FALSE)
 ```
 ## Loading and preprocessing the data
-``` {r echo = TRUE}
+```{r echo = TRUE}
 library(ggplot2)
 if(!file.exists("activity.csv")){
 unzip("RepData_PeerAssessment1/activity.zip")
