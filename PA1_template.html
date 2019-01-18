@@ -125,6 +125,9 @@ $(document).ready(function () {
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
 <pre class="r"><code>library(ggplot2)
+if(!file.exists(&quot;activity.csv&quot;)){
+unzip(&quot;RepData_PeerAssessment1/activity.zip&quot;)
+}
 activity &lt;- read.csv(&quot;activity.csv&quot;)
 activity$date &lt;- as.POSIXct(activity$date,tz =&quot;&quot;,&quot;%Y-%m-%d&quot;)
 weekday &lt;- weekdays(activity$date)

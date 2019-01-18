@@ -10,6 +10,9 @@ output:
 
 ```r
 library(ggplot2)
+if(!file.exists("activity.csv")){
+unzip("RepData_PeerAssessment1/activity.zip")
+}
 activity <- read.csv("activity.csv")
 activity$date <- as.POSIXct(activity$date,tz ="","%Y-%m-%d")
 weekday <- weekdays(activity$date)
